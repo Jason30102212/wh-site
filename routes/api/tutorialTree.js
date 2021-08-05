@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const TutorialNode = require('../../models/TutorialNode')
-const TutorialContent = require('../../models/tutorialContent')
+const TutorialContent = require('../../models/TutorialContent')
 
 // @route     GET api/tutorial-nodes/test
 // @desc      Test tutorial-nodes routes are connected
