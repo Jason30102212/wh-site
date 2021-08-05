@@ -1,0 +1,22 @@
+.text-primary {
+  color: #061779; }
+
+.demo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline; }
+  .demo-container__div {
+    width: 20px;
+    height: 20px;
+    font-size: 30px; }
+  .demo-container__image {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-color: black;
+    background-image: url("../assets/images/logo.svg");
+    background-repeat: space; }
+
+.string-input {
+  width: 50%; }
