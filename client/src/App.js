@@ -10,6 +10,7 @@ import ButtonTest from './components/ButtonTest'
 
 import HomePage from './views/HomePage'
 import TutorialTreePage from './views/TutorialTreePage'
+import BlogPage from './views/BlogPage'
 
 var hist = createBrowserHistory();
 
@@ -19,8 +20,9 @@ function App() {
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/home" component={HomePage} />
-        <Route path="/tutorial_tree_page" component={TutorialTreePage} />
+        <Route path="/tutorial_tree" component={TutorialTreePage} />
         <Route path="/demo" component={Demo} />
+        <Route path="/blog" component={BlogPage} />
       </Switch>
     </Router>
   );

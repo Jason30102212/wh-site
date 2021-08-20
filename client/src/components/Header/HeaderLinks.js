@@ -28,7 +28,7 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
         <Button
-          href="/tutorial_tree_page"
+          href="/tutorial_tree"
           color="transparent"
           className={classes.navLink}
         >
@@ -37,12 +37,22 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          href="/blog"
           color="transparent"
           target="_blank"
           className={classes.navLink}
         >
           Blog
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="https://github.com/wildhackproductions"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          Repositories
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -53,7 +63,7 @@ export default function HeaderLinks(props) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://youtube.com"
+            href="https://www.youtube.com/channel/UCngo3ZjBFpo7byREEiMh3LA"
             target="_blank"
             color="transparent"
             className={classes.navLink}
@@ -88,7 +98,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
+            href="https://www.facebook.com/Wild-Hack-105010278508669"
             target="_blank"
             className={classes.navLink}
           >

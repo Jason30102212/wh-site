@@ -148,10 +148,10 @@ const TutorialTreeContainer = (props) => {
   const displayNode = () => {
     if(learningTreeNodes && areNodesGenerated) {
       return (
-        <div style={{ height: 500 }}>
+        <div style={{ height: 800 }}>
           <ReactFlow
-            defaultZoom={.5}
-            defaultPosition={[0, 200]}
+            defaultZoom={0.05}
+            defaultPosition={[100, 400]}
             elements={learningTreeNodes}
           />
         </div>

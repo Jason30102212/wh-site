@@ -1,6 +1,6 @@
 import React from 'react'
-import classNames from "classnames";
-import { makeStyles } from "@material-ui/core/styles";
+import classNames from 'classnames';
+import { makeStyles } from '@material-ui/core/styles';
 import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 
 import imageOne from "../../assets/img/landing-bg.jpg"
@@ -17,7 +17,9 @@ import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 import TutorialsSection from './Sections/TutorialsSection.js';
-
+import BlogSection from './Sections/BlogSection.js';
+import RepositoriesSection from './Sections/RepositoriesSection.js'
+import CurrentProjectsSection from './Sections/CurrentProjectsSection'
 
 const dashboardRoutes = []
 const useStyles = makeStyles(styles);
@@ -48,26 +50,16 @@ const HomePage = (props) => {
                 A place for programming tutorials.
               </h4>
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Watch video
-              </Button>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
-          <TeamSection />
-          <WorkSection />
           <TutorialsSection />
+          <BlogSection />
+          <RepositoriesSection />
+          <CurrentProjectsSection />
         </div>
       </div>
       <Footer />

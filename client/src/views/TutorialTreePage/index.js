@@ -12,6 +12,11 @@ import Footer from "../../components/Footer/Footer.js";
 const dashboardRoutes = []
 const useStyles = makeStyles(styles);
 
+var containerStyle = {
+  maxWidth: '2000px',
+  minHeight: '800px'
+}
+
 
 const TutorialTreePage = (props) => {
   const classes = useStyles();
@@ -31,7 +36,7 @@ const TutorialTreePage = (props) => {
         {...rest}
       />
       <div className={classNames(classes.main)}>
-        <div className={classes.container}>
+        <div className={classes.container} style={containerStyle}>
           <TutorialTreeSection />
         </div>
       </div>
