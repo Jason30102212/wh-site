@@ -15,7 +15,9 @@ import EmbeddedVideoDisplay from '../EmbeddedVideoDisplay/EmbeddedVideoDisplay.j
       fontSize: 30
     },
     subheading: {
-      color: 'grey'
+      color: 'grey',
+      maxWidth: '75vw',
+      margin: '30px auto'
     },
     pushDown: {
       height: '300px',

@@ -27,16 +27,16 @@ const useStyles = makeStyles({
     }
   },
   frameworkNode: {
-    backgroundColor: 'green',
+    backgroundColor: '#26a6ab',
     '&:hover': {
-      backgroundColor: 'darkGreen',
+      backgroundColor: '#016569',
     },
     borderRadius: '100px'
   },
   languageNode: {
-    backgroundColor: 'red',
+    backgroundColor: '#e63946',
     '&:hover': {
-      backgroundColor: 'darkRed',
+      backgroundColor: '#9e0813',
     },
     borderRadius: '100px'
   },
@@ -44,9 +44,9 @@ const useStyles = makeStyles({
     textAlign: 'center'
   },
   tuteNode: {
-    backgroundColor: 'blue',
+    backgroundColor: '#457b9d',
     '&:hover': {
-      backgroundColor: 'darkblue'
+      backgroundColor: '#014c7a'
     },
     borderRadius: '100px'
   },
@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     width: '50px',
     height: '50px',
     border: '2px solid #eef5df',
-    backgroundColor: '#ff5248',
+    backgroundColor: '#b3121e',
     borderRadius: '50%',
     marginTop: '20px',
     color: 'white',
@@ -127,7 +127,7 @@ const TutorialTreeContainer = (props) => {
           position: {x: (xDefault * parseInt(node.xMod)), y: (yDefault * parseInt(node.yMod))},
           targetPosition: node.targetPosition,
           sourcePosition: node.sourcePosition,
-          className: style + " " + classes.displayNode,
+          className: style + " " + classes.displayNode + " , card",
           content: contentArray.find(x => x.name === node.name)
         }
       )
@@ -148,10 +148,33 @@ const TutorialTreeContainer = (props) => {
   const displayNode = () => {
     if(learningTreeNodes && areNodesGenerated) {
       return (
-        <div style={{ height: 800 }}>
+        <div style={{ height: 700, backgroundColor: '#eeeeee' }}>
+          <div className="card" style={{height: '', width: '', backgroundColor: 'grey', position: 'absolute', left: '40px', top: '100px'}}>
+            <div style={{display: 'flex', alignItems: 'baseline'}}>
+              <div className="card" style={{height: '12px', width: '12px', backgroundColor: '#e63946', margin: '5px'}}>
+              </div>
+              <div style={{margin: '5px'}}>
+                Languages
+              </div>
+            </div>
+            <div style={{display: 'flex', alignItems: 'baseline'}}>
+              <div className="card" style={{height: '12px', width: '12px', backgroundColor: '#457b9d', margin: '5px'}}>
+              </div>
+              <div style={{margin: '5px'}}>
+                Tutorials
+              </div>
+            </div>
+            <div style={{display: 'flex', alignItems: 'baseline'}}>
+              <div className="card" style={{height: '12px', width: '12px', backgroundColor: '#26a6ab', margin: '5px'}}>
+              </div>
+              <div style={{margin: '5px'}}>
+                Frameworks
+              </div>
+            </div>
+          </div>
           <ReactFlow
             defaultZoom={0.05}
-            defaultPosition={[100, 400]}
+            defaultPosition={[200, 400]}
             elements={learningTreeNodes}
           />
         </div>
