@@ -15,6 +15,16 @@ app.use('/api/items', require('./routes/api/items'))
 app.use('/api/tutorial-tree', require('./routes/api/tutorialTree'))
 
 if (process.env.NODE_ENV === 'production') {
+
+  if(process.env.NODE_ENV === 'production') {
+    app.use((req, res, next) => {
+      if (req.header('x-forwarded-proto') !== 'https')
+        res.redirect(`https://${req.header('host')}${req.url}`)
+      else
+        next()
+    })
+  }
+
   app.use(express.static('client/build'))
 
   app.get('*', (req, res) => {
