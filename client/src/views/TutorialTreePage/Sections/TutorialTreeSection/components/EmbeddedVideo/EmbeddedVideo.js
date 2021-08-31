@@ -43,7 +43,7 @@ const EmbeddedVideo = (props) => {
         src={`https://www.youtube.com/embed/${videoUrlDescription}`}
         title="YouTube video player"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         allowfullscreen>
       </iframe>
     </Card>

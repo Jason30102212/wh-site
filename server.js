@@ -1,4 +1,5 @@
 const express = require('express')
+var enforce = require('express-sslify')
 const connectDB = require('./config/db')
 const path = require('path')
 
@@ -9,6 +10,7 @@ connectDB()
 
 // Init Middleware
 app.use(express.json())
+app.use(enforce.HTTPS());
 
 // Define Routes
 app.use('/api/items', require('./routes/api/items'))
